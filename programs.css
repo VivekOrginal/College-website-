@@ -1,0 +1,91 @@
+.programs-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.program-item {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.program-item:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.program-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.program-header:hover {
+  background: rgba(30, 58, 138, 0.05);
+}
+
+.program-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.program-info i {
+  font-size: 1.5rem;
+  color: var(--royal-blue);
+}
+
+.program-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: var(--royal-blue);
+  transition: transform 0.3s ease;
+}
+
+.program-item.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.program-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(30, 58, 138, 0.02);
+}
+
+.program-item.active .program-details {
+  max-height: 200px;
+}
+
+.program-details p {
+  padding: 0 25px 15px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.program-meta {
+  display: flex;
+  gap: 20px;
+  padding: 0 25px 20px;
+}
+
+.program-meta span {
+  background: var(--royal-blue);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

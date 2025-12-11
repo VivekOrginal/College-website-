@@ -1,0 +1,15 @@
+/* Remove underlines from Apply Now and CTA links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Ensure button styling is preserved */
+.hero-buttons a,
+.cta-content a,
+.nav-menu a {
+  text-decoration: none !important;
+}
