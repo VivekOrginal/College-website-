@@ -41,6 +41,10 @@ A modern, responsive college website for M. C. Varghese College of Arts & Scienc
 ![Footer](screenshots/footer-section.png)
 *Modern footer with navigation links and quick contact form*
 
+### Additional Section
+![Additional Section](screenshots/additional-section.png)
+*Complete website overview showing all sections*
+
 ## 🚀 Technologies Used
 
 - **HTML5**: Semantic markup and structure
