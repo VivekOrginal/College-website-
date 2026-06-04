@@ -161,16 +161,20 @@ style.textContent = `
     .nav-menu.active {
         display: flex;
         position: fixed;
-        top: 80px;
-        right: 20px;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
-        border-radius: 15px;
+        border-radius: 20px;
         padding: 20px;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
-        box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+        box-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
         z-index: 999;
+        border: 1px solid rgba(30, 58, 138, 0.1);
     }
     
     .hamburger.active span:nth-child(1) {
