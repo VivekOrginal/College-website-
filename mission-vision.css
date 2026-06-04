@@ -282,12 +282,32 @@
   .box-header h3 { font-size: 1.4rem; }
   .mission-box p, .vision-box p { font-size: 1rem; }
   .values-wrapper { flex-direction: column; gap: 24px; }
-  .features-container { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
-  .feature-box { padding: 20px; }
-  .feature-box .box-header h3 { font-size: 1.1rem; }
-  .why-choose-new { padding: 50px 0; }
+  .why-choose-new { padding: 40px 0; }
   .mission-vision-new { padding: 50px 0; }
   .values-new { padding: 40px 0; }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .feature-box {
+    padding: 16px;
+    border-radius: 14px;
+  }
+  .feature-box .box-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .feature-box .icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+  .feature-box .icon-wrapper i { font-size: 1.2rem; }
+  .feature-box .box-header h3 { font-size: 1rem; }
+  .feature-box p { font-size: 0.85rem; line-height: 1.5; }
 }
 
 @media (max-width: 480px) {
@@ -299,4 +319,12 @@
   .box-header h3 { font-size: 1.2rem; }
   .value-circle { width: 64px; height: 64px; }
   .value-circle i { font-size: 1.6rem; }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .feature-box { padding: 14px; }
+  .feature-box .box-header h3 { font-size: 0.9rem; }
+  .feature-box p { font-size: 0.8rem; }
 }
