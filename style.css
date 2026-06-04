@@ -139,8 +139,12 @@ body {
     transition: left 0.5s;
 }
 
-.apply-btn:hover::before {
-    left: 100%;
+@media (max-width: 768px) {
+    .apply-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+        border-radius: 25px;
+    }
 }
 
 .hamburger {
