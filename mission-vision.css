@@ -276,28 +276,27 @@
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .mv-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .mission-box, .vision-box {
-    padding: 30px;
-  }
-  
-  .values-wrapper {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .features-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .feature-box {
-    padding: 25px;
-  }
+  .mv-container { grid-template-columns: 1fr; gap: 20px; }
+  .mission-box, .vision-box { padding: 24px; }
+  .box-header h3 { font-size: 1.4rem; }
+  .mission-box p, .vision-box p { font-size: 1rem; }
+  .values-wrapper { flex-direction: column; gap: 24px; }
+  .features-container { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+  .feature-box { padding: 20px; }
+  .feature-box .box-header h3 { font-size: 1.1rem; }
+  .why-choose-new { padding: 50px 0; }
+  .mission-vision-new { padding: 50px 0; }
+  .values-new { padding: 40px 0; }
+}
+
+@media (max-width: 480px) {
+  .mv-container { gap: 16px; }
+  .mission-box, .vision-box { padding: 18px; }
+  .box-header { gap: 12px; }
+  .icon-wrapper { width: 46px; height: 46px; }
+  .icon-wrapper i { font-size: 1.4rem; }
+  .box-header h3 { font-size: 1.2rem; }
+  .value-circle { width: 64px; height: 64px; }
+  .value-circle i { font-size: 1.6rem; }
 }

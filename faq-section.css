@@ -70,3 +70,11 @@
   color: #64748b;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .faq-section { padding: 40px 0; }
+  .faq-list { margin-top: 24px; }
+  .faq-question { padding: 16px 18px; }
+  .faq-question h3 { font-size: 0.95rem; }
+  .faq-answer p { padding: 14px 18px; font-size: 0.9rem; }
+}

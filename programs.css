@@ -65,7 +65,7 @@
 }
 
 .program-item.active .program-details {
-  max-height: 200px;
+  max-height: 300px;
 }
 
 .program-details p {
@@ -88,4 +88,18 @@
   border-radius: 15px;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .programs-list { max-width: 100%; }
+  .program-header { padding: 16px 18px; }
+  .program-info h3 { font-size: 1rem; }
+  .program-info i { font-size: 1.2rem; }
+  .program-details p { padding: 0 18px 12px; font-size: 0.9rem; }
+  .program-meta { padding: 0 18px 16px; }
+}
+
+@media (max-width: 480px) {
+  .program-info { gap: 10px; }
+  .program-info h3 { font-size: 0.95rem; }
 }

@@ -66,6 +66,16 @@
   background: #f8fafc;
 }
 
-.cta-btn i {
-  font-size: 1.2rem;
+.cta-btn i { font-size: 1.2rem; }
+
+@media (max-width: 768px) {
+  .cta-section { padding: 40px 0; }
+  .cta-content h2 { font-size: 1.8rem; }
+  .cta-content p { font-size: 1rem; }
+  .cta-btn { padding: 13px 28px; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .cta-content h2 { font-size: 1.4rem; }
+  .cta-btn { width: 100%; max-width: 280px; justify-content: center; }
 }

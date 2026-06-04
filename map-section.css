@@ -39,6 +39,10 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.map-link i {
-  font-size: 1.1rem;
+.map-link i { font-size: 1.1rem; }
+
+@media (max-width: 768px) {
+  .map-section { padding: 40px 0; }
+  .map-container iframe { height: 280px; }
+  .map-link { padding: 10px 14px; font-size: 0.85rem; }
 }
