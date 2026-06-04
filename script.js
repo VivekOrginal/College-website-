@@ -41,6 +41,12 @@ window.addEventListener('scroll', () => {
         nav.style.background = 'rgba(255, 255, 255, 0.95)';
         nav.style.backdropFilter = 'blur(20px)';
     }
+
+    // Auto-close mobile menu on scroll
+    if (hamburger && navMenu) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 });
 
 // Intersection Observer for animations
