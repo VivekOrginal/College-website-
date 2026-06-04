@@ -18,25 +18,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navOverlay = document.querySelector('.nav-overlay');
-
-function closeMenu() {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-    navOverlay.classList.remove('active');
-}
-
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
-        navOverlay.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
-
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', closeMenu));
-    navOverlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    }));
 }
 
 // Navbar scroll effect
@@ -52,7 +42,8 @@ window.addEventListener('scroll', () => {
 
     // Auto-close mobile menu on scroll
     if (hamburger && navMenu) {
-        closeMenu();
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
     }
 });
 
@@ -173,24 +164,6 @@ style.textContent = `
     
     .nav-menu.active {
         display: flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 75%;
-        max-width: 300px;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        border-radius: 0;
-        padding: 90px 30px 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        box-shadow: -10px 0 40px rgba(30, 58, 138, 0.15);
-        z-index: 999;
-        border-left: 1px solid rgba(30, 58, 138, 0.1);
-        transform: translateX(0);
-        transition: transform 0.3s ease;
     }
     
     .hamburger.active span:nth-child(1) {
