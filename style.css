@@ -898,16 +898,16 @@ body {
 }
 
 .contact-content {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-    max-width: 900px;
-    width: 100%;
 }
 
 .contact-item {
@@ -985,23 +985,21 @@ body {
 
 /* Footer */
 .footer {
-    background: #0f172a;
+    background: var(--dark-gray);
     color: var(--white);
     padding: 60px 0 20px;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 40px;
-    text-align: center;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
 }
@@ -1014,27 +1012,24 @@ body {
 }
 
 .footer-logo h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .footer-section p {
     color: var(--text-gray);
-    line-height: 1.8;
-    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .footer-section h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: var(--white);
 }
 
 .footer-section ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-section ul li {
@@ -1044,12 +1039,34 @@ body {
 .footer-section ul li a {
     color: var(--text-gray);
     text-decoration: none;
-    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
     color: var(--royal-blue-light);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--royal-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--royal-blue-light);
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
@@ -1087,13 +1104,13 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .contact-info {
+    .contact-content {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
-        text-align: center;
     }
 }
 
